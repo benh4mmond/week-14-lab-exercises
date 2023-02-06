@@ -14,10 +14,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: List files in the repository
+        working-directory: insecure
         run: |
           ls ${{ github.workspace }}
-      - run: echo "🍏 This job's status is ${{ job.status }}."
-      - run: cd insecure
       - run: npm install
       - run: npm audit
 
