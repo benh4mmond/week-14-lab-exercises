@@ -14,9 +14,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: List files in the repository
-        working-directory: insecure
-        run: |
-          ls ${{ github.workspace }}
+        uses: actions/checkout@v3
+      - run: ls ${{ github.workspace }}
+      - run: cd insecure
       - run: npm install
       - run: npm audit
 
