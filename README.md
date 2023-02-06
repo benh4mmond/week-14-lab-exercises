@@ -43,3 +43,7 @@ npm audit
 npm run lint
 https://github.com/snyk/actions/tree/master/node
 https://github.com/marketplace/actions/npm-audit-action
+check for secrets and ssh and gpg keys in the code.
+
+for our actual assessment must include the tests.js stuff and how out how to remove them.
+also run all these other things.
