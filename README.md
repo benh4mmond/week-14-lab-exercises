@@ -35,3 +35,11 @@ hello greeting depending on the language you pass in the url
     1. [ ] Setup CI steps
     1. [ ] Setup CD deployment using Cloudformation
     1. [ ] Make a change and have it re-deploy
+
+to do
+
+npm run test
+npm audit
+npm run lint
+https://github.com/snyk/actions/tree/master/node
+https://github.com/marketplace/actions/npm-audit-action
