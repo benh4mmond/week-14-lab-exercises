@@ -13,7 +13,7 @@ jobs:
     name: npm audit
     runs-on: ubuntu-latest
     steps:
-      - run: cd week 15/week-14-lab-exercises/insecure
+      - run: cd week-14-lab-exercises/insecure
       - run: npm install
       - run: npm audit
 
