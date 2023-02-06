@@ -16,6 +16,10 @@ jobs:
       - run: cd insecure
       - run: npm install
       - run: npm audit
+      - name: List files in the repository
+        run: |
+          ls ${{ github.workspace }}
+      - run: echo "🍏 This job's status is ${{ job.status }}."
 
 
 
