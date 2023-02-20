@@ -1,8 +1,7 @@
-const a = 'b';
-console.log('Hello this is mashup js')
+const myStatement = false;
+console.log("Hello this is mashup js");
 
-if (myStatement = false)
-
+if (myStatement == false)
 {
-  console.log('This is mashup' + 'strings'); if (true == false) { }
+  console.log("This is mashup" + "strings");
 }
