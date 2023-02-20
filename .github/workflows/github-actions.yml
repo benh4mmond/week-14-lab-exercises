@@ -35,9 +35,7 @@ jobs:
       - run: ls ${{ github.workspace }}
       - run: cd mashup
       - run: |
-          ls
-      - run: npm install
-      - run: npm run lint
+          ls | npm install | npm run lint
 
   tests:
     runs-on: ubuntu-latest
