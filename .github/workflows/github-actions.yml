@@ -20,9 +20,8 @@ jobs:
         with:
           node-version: 16
       - run: ls ${{ github.workspace }}
-      - run: cd insecure
-      - run: npm install
-      - run: npm audit
+      - run: |
+          cd insecure && ls && npm install && npm audit
 
   ellint:
     runs-on: ubuntu-latest
