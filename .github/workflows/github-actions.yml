@@ -15,6 +15,10 @@ jobs:
     steps:
       - name: List files in the repository
         uses: actions/checkout@v3
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node }}
       - run: ls ${{ github.workspace }}
       - run: cd insecure
       - run: npm audit
@@ -22,8 +26,11 @@ jobs:
   ellint:
     runs-on: ubuntu-latest
     steps:
-      - name: List files in the repository
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node }}
       - run: ls ${{ github.workspace }}
       - run: cd mashup
       - run: npm run lint
