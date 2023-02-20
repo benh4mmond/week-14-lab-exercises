@@ -20,7 +20,24 @@ jobs:
       - run: npm install
       - run: npm audit
 
+  ellint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: List files in the repository
+        uses: actions/checkout@v3
+      - run: ls ${{ github.workspace }}
+      - run: cd mashup
+      - run: npm install
+      - run: npm run lint
 
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: List files in the repository
+        uses: actions/checkout@v3
+      - run: ls ${{ github.workspace }}
+      - run: cd unittesting
+      - run: ./returnHello.test.js
 
 
 
