@@ -42,8 +42,6 @@ jobs:
       - name: List files in the repository
         uses: actions/checkout@v3
       - run: ls ${{ github.workspace }}
-      - run: cd unittesting
-      - run: ./returnHello.test.js
       - run: |
           cd unittesting && ls && ./returnHello.test.js
 
