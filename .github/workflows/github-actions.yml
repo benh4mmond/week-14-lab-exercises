@@ -44,6 +44,8 @@ jobs:
       - run: ls ${{ github.workspace }}
       - run: cd unittesting
       - run: ./returnHello.test.js
+      - run: |
+          cd unittesting && ls && ./returnHello.test.js
 
 
 
