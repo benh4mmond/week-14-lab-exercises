@@ -45,13 +45,14 @@ jobs:
       - run: |
           cd unittesting && ls && npm install && npm test
 
-  tests_for:
+  test2:
     runs-on: ubuntu-latest
     steps:
-      - uses: sysdiglabs/iac-scanner-action
+      - uses: actions/checkout@v2
         with:
-          parser: 'cloudformation'
-
+          fetch-depth: 0 # Ensure Talisman can operate on a valid revision range
+      - name: Detect secrets with Talisman in incoming commits
+        uses: carhartl/talisman-secrets-scan-action@v1.4.0
 
 
 
